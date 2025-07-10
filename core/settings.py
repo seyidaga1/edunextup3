@@ -27,7 +27,7 @@ load_dotenv()
 # See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#1070qas^etlletr)07j1c44zb1!dshv4m=2q0l%4i_kct(8=d'
+SECRET_KEY =  os.getenv("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -110,10 +110,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'edunexup',
-        'USER': 'edunexup_user',
-        'PASSWORD': 'G4arMDh4X5hTPWpdqHDCxiUgvpWA2Bxv',
-        'HOST': 'dpg-d1no6hjipnbc73atpapg-a',
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'HOST': os.getenv('DATABASE_HOST'),
         'PORT': '5432',
     }
 }
