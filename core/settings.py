@@ -110,10 +110,10 @@ WSGI_APPLICATION = 'core.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
-        'HOST': 'localhost',
+        'NAME': 'edunexup',
+        'USER': 'edunexup_user',
+        'PASSWORD': 'G4arMDh4X5hTPWpdqHDCxiUgvpWA2Bxv',
+        'HOST': 'dpg-d1no6hjipnbc73atpapg-a',
         'PORT': '5432',
     }
 }
