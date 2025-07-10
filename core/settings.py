@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-#1070qas^etlletr)07j1c44zb1!dshv4m=2q0l%4i_kct(8=d
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://edunextup3.onrender.com"]
 
 
 # Application definition
