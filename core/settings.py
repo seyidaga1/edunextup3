@@ -111,13 +111,17 @@ WSGI_APPLICATION = 'core.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(
-        # Replace this value with your local database's connection string.
-        default='postgresql://edunexup_user:G4arMDh4X5hTPWpdqHDCxiUgvpWA2Bxv@dpg-d1no6hjipnbc73atpapg-a/edunexup',
-        conn_max_age=600
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': os.getenv('DATABASE_NAME'),
+        'USER': os.getenv('DATABASE_USER'),
+        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'HOST': os.getenv('DATABASE_HOST'),
+        'PORT': '5432',
+    }
 }
 
+DATABASES['default'] = dj_database_url.parse('postgresql://edunexup_user:G4arMDh4X5hTPWpdqHDCxiUgvpWA2Bxv@dpg-d1no6hjipnbc73atpapg-a/edunexup')
 
 
 
