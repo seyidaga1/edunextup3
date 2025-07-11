@@ -79,7 +79,7 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # React local server
+    "http://localhost:3001",  # React local server
 ]
 
 CORS_ALLOW_CREDENTIALS = True
